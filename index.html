@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app ="myApp">
+<head>
+	<title> consultar base de datos</title>
+
+</head>
+<body ng-controller = "control" ng-cloack>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<table ng-init="consultarUsuario()" >
+	<tr >
+		<th>Cedula </th>
+		<th>Nombre </th>
+		<th>Email </th>
+		
+	</tr>
+	<tr ng-repeat="post in posts">
+	
+		<td>{{post.cedula}}</td>
+		<td>{{post.nombre}}</td>
+		<td>{{post.email}}</td>
+				
+	</tr>
+</table>
+
+		<label for="email">Email:</label>
+		<input type="text" ng-model="actual.email"><br>
+		<label for="nombre">Nombre:</label>
+		<input type="text" ng-model="actual.nombre"><br>
+		<label for="cedula">cedula:</label>
+		<input type="text" ng-model="actual.cedula"><br>
+		<label for="tipo_usuario">tipos_usuario:</label>
+		<input type="text" ng-model="actual.tipo_usuario"><br>
+
+			<button type='button' ng-click='registrar()'>agregar</button>
+		
+</body>
+
+<script type="text/javascript" src="Controlador/controlador.js"></script>
+</html>
